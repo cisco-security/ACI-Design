@@ -1,0 +1,134 @@
+: Hardware:   ASAv, 1024 MB RAM, CPU Xeon E5 series 2394 MHz
+:
+ASA Version 9.7(1)15 
+!
+hostname asav-3
+!
+license smart
+ feature tier standard
+ throughput level 100M
+names
+
+!
+interface GigabitEthernet0/0
+ mac-address 0050.56aa.aaaa
+ nameif externalIf
+ security-level 50
+ ip address 10.1.3.1 255.255.255.0 
+!
+interface GigabitEthernet0/1
+ shutdown     
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/2
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/3
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/4
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/5
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/6
+ shutdown
+ no nameif
+ no security-level
+ no ip address
+!
+interface GigabitEthernet0/7
+ description STATE Failover Interface
+!
+interface GigabitEthernet0/8
+ description LAN Failover Interface
+!
+interface Management0/0
+ management-only
+ nameif management
+ security-level 100
+ ip address 10.93.244.24 255.255.255.240 standby 10.93.244.25 
+!             
+boot system disk0:/asa971-15-smp-k8.bin
+ftp mode passive
+same-security-traffic permit intra-interface
+access-list access-list-inbound extended permit tcp any any eq www 
+access-list access-list-inbound extended permit tcp any any eq https 
+pager lines 23
+mtu management 1500
+mtu externalIf 1500
+failover
+failover lan unit primary
+failover lan interface fo_lan GigabitEthernet0/8
+failover link fo_link GigabitEthernet0/7
+failover interface ip fo_lan 10.0.0.1 255.255.255.252 standby 10.0.0.2
+failover interface ip fo_link 10.0.0.5 255.255.255.252 standby 10.0.0.6
+icmp unreachable rate-limit 1 burst-size 1
+no asdm history enable
+arp timeout 14400
+no arp permit-nonconnected
+arp rate-limit 8192
+access-group access-list-inbound in interface externalIf
+route management 0.0.0.0 0.0.0.0 10.93.244.17 1
+route externalIf 0.0.0.0 0.0.0.0 10.1.3.254 1
+timeout xlate 3:00:00
+timeout pat-xlate 0:00:30
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
+timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
+timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
+timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
+timeout tcp-proxy-reassembly 0:01:00
+timeout floating-conn 0:00:00
+timeout conn-holddown 0:00:15
+timeout igp stale-route 0:01:10
+user-identity default-domain LOCAL
+aaa authentication ssh console LOCAL 
+http server enable
+http 0.0.0.0 0.0.0.0 management
+no snmp-server location
+no snmp-server contact
+crypto ipsec security-association pmtu-aging infinite
+crypto ca trustpoint _SmartCallHome_ServerCA
+ no validation-usage
+ crl configure
+crypto ca trustpool policy
+ auto-import
+
+telnet timeout 5
+ssh scopy enable
+ssh stricthostkeycheck
+ssh 0.0.0.0 0.0.0.0 management
+ssh timeout 60
+ssh key-exchange group dh-group1-sha1
+console timeout 0
+no threat-detection basic-threat
+no threat-detection statistics access-list
+no threat-detection statistics tcp-intercept
+dynamic-access-policy-record DfltAccessPolicy
+
+!
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+!
+prompt hostname context 
+
+: end
