@@ -1,0 +1,253 @@
+{
+  "imdata": [
+    {
+      "vnsAbsGraph": {
+        "attributes": {
+          "dn": "uni/tn-Sec_Lab/AbsGraph-3-PBR-SG", 
+          "ownerKey": "", 
+          "name": "3-PBR-SG", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": "", 
+          "uiTemplateType": "UNSPECIFIED"
+        }, 
+        "children": [
+          {
+            "vnsAbsTermNodeProv": {
+              "attributes": {
+                "ownerKey": "", 
+                "ownerTag": "", 
+                "name": "T2", 
+                "descr": "", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsOutTerm": {
+                    "attributes": {
+                      "name": "", 
+                      "descr": "", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsInTerm": {
+                    "attributes": {
+                      "name": "", 
+                      "descr": "", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsAbsTermConn": {
+                    "attributes": {
+                      "ownerKey": "", 
+                      "attNotify": "no", 
+                      "name": "1", 
+                      "descr": "", 
+                      "nameAlias": "", 
+                      "ownerTag": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsAbsTermNodeCon": {
+              "attributes": {
+                "ownerKey": "", 
+                "ownerTag": "", 
+                "name": "T1", 
+                "descr": "", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsOutTerm": {
+                    "attributes": {
+                      "name": "", 
+                      "descr": "", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsInTerm": {
+                    "attributes": {
+                      "name": "", 
+                      "descr": "", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsAbsTermConn": {
+                    "attributes": {
+                      "ownerKey": "", 
+                      "attNotify": "no", 
+                      "name": "1", 
+                      "descr": "", 
+                      "nameAlias": "", 
+                      "ownerTag": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsAbsNode": {
+              "attributes": {
+                "funcTemplateType": "FW_ROUTED", 
+                "isCopy": "no", 
+                "ownerKey": "", 
+                "managed": "yes", 
+                "name": "3-PBR-FNC-NODE", 
+                "descr": "", 
+                "funcType": "GoTo", 
+                "shareEncap": "no", 
+                "sequenceNumber": "0", 
+                "routingMode": "Redirect", 
+                "nameAlias": "", 
+                "ownerTag": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsNodeToMFunc": {
+                    "attributes": {
+                      "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mFunc-Firewall"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsNodeToLDev": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsNodeToAbsFuncProf": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/absFuncProfContr/absFuncProfGrp-3-PBR-FNC-PROFILE/absFuncProf-ASA-CFG"
+                    }
+                  }
+                }, 
+                {
+                  "vnsAbsFuncConn": {
+                    "attributes": {
+                      "ownerKey": "", 
+                      "attNotify": "no", 
+                      "name": "consumer", 
+                      "descr": "", 
+                      "nameAlias": "", 
+                      "ownerTag": ""
+                    }, 
+                    "children": [
+                      {
+                        "vnsRsMConnAtt": {
+                          "attributes": {
+                            "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mFunc-Firewall/mConn-external"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }, 
+                {
+                  "vnsAbsFuncConn": {
+                    "attributes": {
+                      "ownerKey": "", 
+                      "attNotify": "no", 
+                      "name": "provider", 
+                      "descr": "", 
+                      "nameAlias": "", 
+                      "ownerTag": ""
+                    }, 
+                    "children": [
+                      {
+                        "vnsRsMConnAtt": {
+                          "attributes": {
+                            "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mFunc-Firewall/mConn-internal"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsAbsConnection": {
+              "attributes": {
+                "adjType": "L3", 
+                "ownerKey": "", 
+                "name": "C2", 
+                "descr": "", 
+                "connDir": "provider", 
+                "connType": "external", 
+                "nameAlias": "", 
+                "ownerTag": "", 
+                "directConnect": "no", 
+                "unicastRoute": "yes"
+              }, 
+              "children": [
+                {
+                  "vnsRsAbsConnectionConns": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/AbsGraph-3-PBR-SG/AbsTermNodeProv-T2/AbsTConn"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsAbsConnectionConns": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/AbsGraph-3-PBR-SG/AbsNode-3-PBR-FNC-NODE/AbsFConn-provider"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsAbsConnection": {
+              "attributes": {
+                "adjType": "L3", 
+                "ownerKey": "", 
+                "name": "C1", 
+                "descr": "", 
+                "connDir": "provider", 
+                "connType": "external", 
+                "nameAlias": "", 
+                "ownerTag": "", 
+                "directConnect": "no", 
+                "unicastRoute": "yes"
+              }, 
+              "children": [
+                {
+                  "vnsRsAbsConnectionConns": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/AbsGraph-3-PBR-SG/AbsNode-3-PBR-FNC-NODE/AbsFConn-consumer"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsAbsConnectionConns": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/AbsGraph-3-PBR-SG/AbsTermNodeCon-T1/AbsTConn"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}

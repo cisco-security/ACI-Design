@@ -1,0 +1,205 @@
+{
+  "imdata": [
+    {
+      "vzFilter": {
+        "attributes": {
+          "dn": "uni/tn-common/flt-icmp", 
+          "ownerKey": "", 
+          "name": "icmp", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": ""
+        }, 
+        "children": [
+          {
+            "vzEntry": {
+              "attributes": {
+                "tcpRules": "", 
+                "arpOpc": "unspecified", 
+                "applyToFrag": "no", 
+                "dToPort": "unspecified", 
+                "descr": "", 
+                "nameAlias": "", 
+                "matchDscp": "unspecified", 
+                "prot": "icmp", 
+                "icmpv4T": "unspecified", 
+                "sFromPort": "unspecified", 
+                "stateful": "no", 
+                "icmpv6T": "unspecified", 
+                "sToPort": "unspecified", 
+                "etherT": "ip", 
+                "dFromPort": "unspecified", 
+                "name": "icmp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}
+{
+  "imdata": [
+    {
+      "vzFilter": {
+        "attributes": {
+          "dn": "uni/tn-common/flt-icmp", 
+          "ownerKey": "", 
+          "name": "icmp", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": ""
+        }, 
+        "children": [
+          {
+            "vzEntry": {
+              "attributes": {
+                "tcpRules": "", 
+                "arpOpc": "unspecified", 
+                "applyToFrag": "no", 
+                "dToPort": "unspecified", 
+                "descr": "", 
+                "nameAlias": "", 
+                "matchDscp": "unspecified", 
+                "prot": "icmp", 
+                "icmpv4T": "unspecified", 
+                "sFromPort": "unspecified", 
+                "stateful": "no", 
+                "icmpv6T": "unspecified", 
+                "sToPort": "unspecified", 
+                "etherT": "ip", 
+                "dFromPort": "unspecified", 
+                "name": "icmp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}
+{
+  "imdata": [
+    {
+      "vzFilter": {
+        "attributes": {
+          "dn": "uni/tn-common/flt-arp", 
+          "ownerKey": "", 
+          "name": "arp", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": ""
+        }, 
+        "children": [
+          {
+            "vzEntry": {
+              "attributes": {
+                "tcpRules": "", 
+                "arpOpc": "unspecified", 
+                "applyToFrag": "no", 
+                "dToPort": "unspecified", 
+                "descr": "", 
+                "nameAlias": "", 
+                "matchDscp": "unspecified", 
+                "prot": "unspecified", 
+                "icmpv4T": "unspecified", 
+                "sFromPort": "unspecified", 
+                "stateful": "no", 
+                "icmpv6T": "unspecified", 
+                "sToPort": "unspecified", 
+                "etherT": "arp", 
+                "dFromPort": "unspecified", 
+                "name": "arp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}
+{
+  "imdata": [
+    {
+      "vzFilter": {
+        "attributes": {
+          "dn": "uni/tn-common/flt-http", 
+          "ownerKey": "", 
+          "name": "http", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": ""
+        }, 
+        "children": [
+          {
+            "vzEntry": {
+              "attributes": {
+                "tcpRules": "", 
+                "arpOpc": "unspecified", 
+                "applyToFrag": "no", 
+                "dToPort": "http", 
+                "descr": "", 
+                "nameAlias": "", 
+                "matchDscp": "unspecified", 
+                "prot": "tcp", 
+                "icmpv4T": "unspecified", 
+                "sFromPort": "unspecified", 
+                "stateful": "no", 
+                "icmpv6T": "unspecified", 
+                "sToPort": "unspecified", 
+                "etherT": "ip", 
+                "dFromPort": "http", 
+                "name": "htp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}
+{
+  "imdata": [
+    {
+      "vzFilter": {
+        "attributes": {
+          "dn": "uni/tn-common/flt-https", 
+          "ownerKey": "", 
+          "name": "https", 
+          "descr": "", 
+          "nameAlias": "", 
+          "ownerTag": ""
+        }, 
+        "children": [
+          {
+            "vzEntry": {
+              "attributes": {
+                "tcpRules": "", 
+                "arpOpc": "unspecified", 
+                "applyToFrag": "no", 
+                "dToPort": "https", 
+                "descr": "", 
+                "nameAlias": "", 
+                "matchDscp": "unspecified", 
+                "prot": "tcp", 
+                "icmpv4T": "unspecified", 
+                "sFromPort": "unspecified", 
+                "stateful": "no", 
+                "icmpv6T": "unspecified", 
+                "sToPort": "unspecified", 
+                "etherT": "ip", 
+                "dFromPort": "https", 
+                "name": "https"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}

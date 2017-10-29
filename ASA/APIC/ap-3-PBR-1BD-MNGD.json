@@ -1,0 +1,129 @@
+{
+  "imdata": [
+    {
+      "fvAp": {
+        "attributes": {
+          "dn": "uni/tn-Sec_Lab/ap-3-PBR-1BD-MNGD", 
+          "ownerKey": "", 
+          "name": "3-PBR-1BD-MNGD", 
+          "descr": "Design #1. PBR with 1 bridge domain. ASA managed.", 
+          "nameAlias": "", 
+          "ownerTag": "", 
+          "prio": "unspecified"
+        }, 
+        "children": [
+          {
+            "fvAEPg": {
+              "attributes": {
+                "isAttrBasedEPg": "no", 
+                "matchT": "AtleastOne", 
+                "name": "APP-3", 
+                "descr": "", 
+                "fwdCtrl": "", 
+                "prefGrMemb": "exclude", 
+                "nameAlias": "", 
+                "prio": "unspecified", 
+                "pcEnfPref": "unenforced"
+              }, 
+              "children": [
+                {
+                  "fvRsDomAtt": {
+                    "attributes": {
+                      "tDn": "uni/vmmp-VMware/dom-APIC-1", 
+                      "primaryEncap": "unknown", 
+                      "classPref": "encap", 
+                      "delimiter": "", 
+                      "instrImedcy": "immediate", 
+                      "encap": "unknown", 
+                      "encapMode": "auto", 
+                      "netflowPref": "disabled", 
+                      "resImedcy": "immediate"
+                    }
+                  }
+                }, 
+                {
+                  "fvRsCons": {
+                    "attributes": {
+                      "tnVzBrCPName": "3-PBR-MNGD-CONTRACT", 
+                      "prio": "unspecified"
+                    }
+                  }
+                }, 
+                {
+                  "fvRsCustQosPol": {
+                    "attributes": {
+                      "tnQosCustomPolName": ""
+                    }
+                  }
+                }, 
+                {
+                  "fvRsBd": {
+                    "attributes": {
+                      "tnFvBDName": "3-WEB-TO-APP-BD"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "fvAEPg": {
+              "attributes": {
+                "isAttrBasedEPg": "no", 
+                "matchT": "AtleastOne", 
+                "name": "WEB-3", 
+                "descr": "", 
+                "fwdCtrl": "", 
+                "prefGrMemb": "exclude", 
+                "nameAlias": "", 
+                "prio": "unspecified", 
+                "pcEnfPref": "unenforced"
+              }, 
+              "children": [
+                {
+                  "fvRsProv": {
+                    "attributes": {
+                      "tnVzBrCPName": "3-PBR-MNGD-CONTRACT", 
+                      "matchT": "AtleastOne", 
+                      "prio": "unspecified"
+                    }
+                  }
+                }, 
+                {
+                  "fvRsDomAtt": {
+                    "attributes": {
+                      "tDn": "uni/vmmp-VMware/dom-APIC-1", 
+                      "primaryEncap": "unknown", 
+                      "classPref": "encap", 
+                      "delimiter": "", 
+                      "instrImedcy": "immediate", 
+                      "encap": "unknown", 
+                      "encapMode": "auto", 
+                      "netflowPref": "disabled", 
+                      "resImedcy": "immediate"
+                    }
+                  }
+                }, 
+                {
+                  "fvRsCustQosPol": {
+                    "attributes": {
+                      "tnQosCustomPolName": ""
+                    }
+                  }
+                }, 
+                {
+                  "fvRsBd": {
+                    "attributes": {
+                      "tnFvBDName": "3-WEB-TO-APP-BD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}

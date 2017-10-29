@@ -1,0 +1,759 @@
+{
+  "imdata": [
+    {
+      "vnsLDevVip": {
+        "attributes": {
+          "dn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA", 
+          "isCopy": "no", 
+          "managed": "yes", 
+          "name": "3-PBR-ASA", 
+          "svcType": "FW", 
+          "funcType": "GoTo", 
+          "devtype": "VIRTUAL", 
+          "packageModel": "ASAv", 
+          "contextAware": "single-Context", 
+          "nameAlias": "", 
+          "trunking": "no", 
+          "mode": "legacy-Mode"
+        }, 
+        "children": [
+          {
+            "vnsLIf": {
+              "attributes": {
+                "name": "fo_link", 
+                "encap": "unknown", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsMetaIf": {
+                    "attributes": {
+                      "isConAndProv": "no", 
+                      "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mIfLbl-failover_link"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device2/cIf-[GigabitEthernet0/7]"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device1/cIf-[GigabitEthernet0/7]"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsLIf": {
+              "attributes": {
+                "name": "Consumer", 
+                "encap": "unknown", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsMetaIf": {
+                    "attributes": {
+                      "isConAndProv": "no", 
+                      "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mIfLbl-external"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device2/cIf-[GigabitEthernet0/0]"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device1/cIf-[GigabitEthernet0/0]"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsLIf": {
+              "attributes": {
+                "name": "fo_lan", 
+                "encap": "unknown", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsMetaIf": {
+                    "attributes": {
+                      "isConAndProv": "no", 
+                      "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mIfLbl-failover_lan"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device1/cIf-[GigabitEthernet0/8]"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device2/cIf-[GigabitEthernet0/8]"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsLIf": {
+              "attributes": {
+                "name": "Provider", 
+                "encap": "unknown", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsMetaIf": {
+                    "attributes": {
+                      "isConAndProv": "no", 
+                      "tDn": "uni/infra/mDev-CISCO-ASA-1.2/mIfLbl-internal"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device1/cIf-[GigabitEthernet0/0]"
+                    }
+                  }
+                }, 
+                {
+                  "vnsRsCIfAttN": {
+                    "attributes": {
+                      "tDn": "uni/tn-Sec_Lab/lDevVip-3-PBR-ASA/cDev-Device2/cIf-[GigabitEthernet0/0]"
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsDevFolder": {
+              "attributes": {
+                "name": "SameSecurityTraffic", 
+                "key": "SameSecurityTraffic", 
+                "nameAlias": ""
+              }, 
+              "children": [
+                {
+                  "vnsDevParam": {
+                    "attributes": {
+                      "value": "permit", 
+                      "name": "intra_interface", 
+                      "key": "intra_interface", 
+                      "nameAlias": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsRsALDevToDomP": {
+              "attributes": {
+                "tDn": "uni/vmmp-VMware/dom-APIC-1"
+              }
+            }
+          }, 
+          {
+            "vnsCMgmt": {
+              "attributes": {
+                "host": "10.93.244.24", 
+                "name": "", 
+                "nameAlias": "", 
+                "port": "443"
+              }
+            }
+          }, 
+          {
+            "vnsCDev": {
+              "attributes": {
+                "vcenterName": "pod5-vcenter", 
+                "vmName": "ASAv-3", 
+                "name": "Device1", 
+                "nameAlias": "", 
+                "devCtxLbl": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsCDevToCtrlrP": {
+                    "attributes": {
+                      "tDn": "uni/vmmp-VMware/dom-APIC-1/ctrlr-pod5-vcenter"
+                    }
+                  }
+                }, 
+                {
+                  "vnsDevFolder": {
+                    "attributes": {
+                      "name": "FailoverConfig", 
+                      "key": "FailoverConfig", 
+                      "nameAlias": ""
+                    }, 
+                    "children": [
+                      {
+                        "vnsDevParam": {
+                          "attributes": {
+                            "value": "primary", 
+                            "name": "lan_unit", 
+                            "key": "lan_unit", 
+                            "nameAlias": ""
+                          }
+                        }
+                      }, 
+                      {
+                        "vnsDevParam": {
+                          "attributes": {
+                            "value": "enable", 
+                            "name": "failover", 
+                            "key": "failover", 
+                            "nameAlias": ""
+                          }
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_lan_interface", 
+                            "key": "failover_lan_interface", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_lan", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_link_interface", 
+                            "key": "failover_link_interface", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_link", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_ip", 
+                            "key": "failover_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.2", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.1", 
+                                  "name": "active_ip", 
+                                  "key": "active_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "255.255.255.252", 
+                                  "name": "netmask", 
+                                  "key": "netmask", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_lan", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_ip2", 
+                            "key": "failover_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_link", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "255.255.255.252", 
+                                  "name": "netmask", 
+                                  "key": "netmask", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.5", 
+                                  "name": "active_ip", 
+                                  "key": "active_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.6", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "mgmt_standby_ip", 
+                            "key": "mgmt_standby_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.93.244.25", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }, 
+                {
+                  "vnsCMgmt": {
+                    "attributes": {
+                      "host": "10.93.244.24", 
+                      "name": "", 
+                      "nameAlias": "", 
+                      "port": "443"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/7", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 9"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/8", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 10"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/0", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 2"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCCredSecret": {
+                    "attributes": {
+                      "name": "password", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsCCred": {
+                    "attributes": {
+                      "value": "cisco", 
+                      "name": "username", 
+                      "nameAlias": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsCDev": {
+              "attributes": {
+                "vcenterName": "pod5-vcenter", 
+                "vmName": "ASAv-4", 
+                "name": "Device2", 
+                "nameAlias": "", 
+                "devCtxLbl": ""
+              }, 
+              "children": [
+                {
+                  "vnsRsCDevToCtrlrP": {
+                    "attributes": {
+                      "tDn": "uni/vmmp-VMware/dom-APIC-1/ctrlr-pod5-vcenter"
+                    }
+                  }
+                }, 
+                {
+                  "vnsDevFolder": {
+                    "attributes": {
+                      "name": "FailoverConfig", 
+                      "key": "FailoverConfig", 
+                      "nameAlias": ""
+                    }, 
+                    "children": [
+                      {
+                        "vnsDevParam": {
+                          "attributes": {
+                            "value": "enable", 
+                            "name": "failover", 
+                            "key": "failover", 
+                            "nameAlias": ""
+                          }
+                        }
+                      }, 
+                      {
+                        "vnsDevParam": {
+                          "attributes": {
+                            "value": "secondary", 
+                            "name": "lan_unit", 
+                            "key": "lan_unit", 
+                            "nameAlias": ""
+                          }
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_ip2", 
+                            "key": "failover_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_link", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "255.255.255.252", 
+                                  "name": "netmask", 
+                                  "key": "netmask", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.5", 
+                                  "name": "active_ip", 
+                                  "key": "active_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.6", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_ip", 
+                            "key": "failover_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "255.255.255.252", 
+                                  "name": "netmask", 
+                                  "key": "netmask", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_lan", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.1", 
+                                  "name": "active_ip", 
+                                  "key": "active_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }, 
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.0.0.2", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_link_interface", 
+                            "key": "failover_link_interface", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_link", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "failover_lan_interface", 
+                            "key": "failover_lan_interface", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "fo_lan", 
+                                  "name": "interface_name", 
+                                  "key": "interface_name", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }, 
+                      {
+                        "vnsDevFolder": {
+                          "attributes": {
+                            "name": "mgmt_standby_ip", 
+                            "key": "mgmt_standby_ip", 
+                            "nameAlias": ""
+                          }, 
+                          "children": [
+                            {
+                              "vnsDevParam": {
+                                "attributes": {
+                                  "value": "10.93.244.25", 
+                                  "name": "standby_ip", 
+                                  "key": "standby_ip", 
+                                  "nameAlias": ""
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }, 
+                {
+                  "vnsCMgmt": {
+                    "attributes": {
+                      "host": "10.93.244.25", 
+                      "name": "", 
+                      "nameAlias": "", 
+                      "port": "443"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/7", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 9"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/8", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 10"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCIf": {
+                    "attributes": {
+                      "name": "GigabitEthernet0/0", 
+                      "nameAlias": "", 
+                      "vnicName": "Network adapter 2"
+                    }
+                  }
+                }, 
+                {
+                  "vnsCCredSecret": {
+                    "attributes": {
+                      "name": "password", 
+                      "nameAlias": ""
+                    }
+                  }
+                }, 
+                {
+                  "vnsCCred": {
+                    "attributes": {
+                      "value": "cisco", 
+                      "name": "username", 
+                      "nameAlias": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }, 
+          {
+            "vnsCCredSecret": {
+              "attributes": {
+                "name": "password", 
+                "nameAlias": ""
+              }
+            }
+          }, 
+          {
+            "vnsRsMDevAtt": {
+              "attributes": {
+                "tDn": "uni/infra/mDev-CISCO-ASA-1.2"
+              }
+            }
+          }, 
+          {
+            "vnsCCred": {
+              "attributes": {
+                "value": "cisco", 
+                "name": "username", 
+                "nameAlias": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}

@@ -1,0 +1,90 @@
+{
+  "imdata": [
+    {
+      "fvBD": {
+        "attributes": {
+          "dn": "uni/tn-Sec_Lab/BD-3-WEB-TO-APP-BD", 
+          "ownerKey": "", 
+          "vmac": "not-applicable", 
+          "unkMcastAct": "flood", 
+          "name": "3-WEB-TO-APP-BD", 
+          "descr": "", 
+          "unicastRoute": "yes", 
+          "epClear": "no", 
+          "unkMacUcastAct": "proxy", 
+          "arpFlood": "no", 
+          "limitIpLearnToSubnets": "no", 
+          "llAddr": "::", 
+          "mcastAllow": "no", 
+          "mac": "00:22:BD:F8:19:FF", 
+          "epMoveDetectMode": "", 
+          "nameAlias": "", 
+          "ownerTag": "", 
+          "multiDstPktAct": "bd-flood", 
+          "type": "regular", 
+          "ipLearning": "no"
+        }, 
+        "children": [
+          {
+            "fvSubnet": {
+              "attributes": {
+                "name": "", 
+                "descr": "", 
+                "ctrl": "", 
+                "ip": "10.1.1.1/24", 
+                "preferred": "no", 
+                "virtual": "no", 
+                "nameAlias": "", 
+                "scope": "private"
+              }
+            }
+          }, 
+          {
+            "fvSubnet": {
+              "attributes": {
+                "name": "", 
+                "descr": "", 
+                "ctrl": "", 
+                "ip": "10.1.2.1/24", 
+                "preferred": "no", 
+                "virtual": "no", 
+                "nameAlias": "", 
+                "scope": "private"
+              }
+            }
+          }, 
+          {
+            "fvRsIgmpsn": {
+              "attributes": {
+                "tnIgmpSnoopPolName": ""
+              }
+            }
+          }, 
+          {
+            "fvRsCtx": {
+              "attributes": {
+                "tnFvCtxName": "3-PBR-VRF"
+              }
+            }
+          }, 
+          {
+            "fvRsBdToEpRet": {
+              "attributes": {
+                "resolveAct": "resolve", 
+                "tnFvEpRetPolName": ""
+              }
+            }
+          }, 
+          {
+            "fvRsBDToNdP": {
+              "attributes": {
+                "tnNdIfPolName": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}

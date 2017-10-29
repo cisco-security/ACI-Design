@@ -1,0 +1,61 @@
+{
+  "imdata": [
+    {
+      "fvCtx": {
+        "attributes": {
+          "dn": "uni/tn-Sec_Lab/ctx-3-PBR-VRF", 
+          "ownerKey": "", 
+          "name": "3-PBR-VRF", 
+          "descr": "", 
+          "knwMcastAct": "permit", 
+          "pcEnfDir": "ingress", 
+          "nameAlias": "", 
+          "ownerTag": "", 
+          "pcEnfPref": "enforced"
+        }, 
+        "children": [
+          {
+            "vzAny": {
+              "attributes": {
+                "prefGrMemb": "disabled", 
+                "matchT": "AtleastOne", 
+                "name": "", 
+                "descr": "", 
+                "nameAlias": ""
+              }
+            }
+          }, 
+          {
+            "fvRsOspfCtxPol": {
+              "attributes": {
+                "tnOspfCtxPolName": ""
+              }
+            }
+          }, 
+          {
+            "fvRsCtxToEpRet": {
+              "attributes": {
+                "tnFvEpRetPolName": ""
+              }
+            }
+          }, 
+          {
+            "fvRsCtxToExtRouteTagPol": {
+              "attributes": {
+                "tnL3extRouteTagPolName": ""
+              }
+            }
+          }, 
+          {
+            "fvRsBgpCtxPol": {
+              "attributes": {
+                "tnBgpCtxPolName": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  ], 
+  "totalCount": "1"
+}
